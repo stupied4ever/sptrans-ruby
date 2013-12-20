@@ -17,6 +17,22 @@ Or install it yourself as:
     $ gem install sptrans
 
 
+## Uso
+
+```ruby
+sp_trans = SPTrans.new token
+linhas = sp_trans.linhas termos_busca
+# => [<SPTrans::Linha @...>, <SPTrans::Linha @...>]
+```
+
+Customizar a criação da conexão usando o Faraday:
+
+```ruby
+SPTrans.new token do |faraday|
+  faraday.adapter :curb
+end
+```
+
 ## Contributing
 
 1. Fork it
