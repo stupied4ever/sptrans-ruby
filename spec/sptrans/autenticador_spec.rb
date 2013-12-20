@@ -12,8 +12,8 @@ module SPTrans
       let(:conexao) { Conexao.new conexao_faraday }
       let(:conexao_faraday) { double(post: double(body: 'true')) }
 
-      it 'modifica o status da conexão para autorizada' do
-        expect { autenticar }.to change { conexao.autorizado? }.to(true)
+      it 'modifica o status da conexão para autenticada' do
+        expect { autenticar }.to change { conexao.autenticada? }.to(true)
       end
 
       context 'token inválido' do

@@ -2,10 +2,10 @@ require 'delegate'
 
 module SPTrans
   class Conexao < SimpleDelegator
-    attr_writer :autorizado
+    attr_writer :autenticada
 
-    def autorizado?
-      !! @autorizado
+    def autenticada?
+      !! @autenticada
     end
   end
 end

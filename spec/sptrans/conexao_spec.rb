@@ -12,13 +12,13 @@ module SPTrans
       conexao.get
     end
 
-    it 'sabe se está autorizado' do
-      expect(conexao).not_to be_autorizado
+    it 'sabe se está autenticada' do
+      expect(conexao).not_to be_autenticada
       allow(autenticador).to receive(:autenticar).and_return do
-        conexao.autorizado = true
+        conexao.autenticada = true
       end
       autenticador.autenticar(conexao)
-      expect(conexao).to be_autorizado
+      expect(conexao).to be_autenticada
     end
   end
 end
