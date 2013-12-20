@@ -4,7 +4,7 @@ require 'sptrans/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "sptrans"
-  spec.version       = Sptrans::VERSION
+  spec.version       = SPTrans::VERSION
   spec.authors       = ["Rafael da Silva Almeida"]
   spec.email         = ["eusou@rafaelalmeida.net"]
   spec.description   = "Easy access to Olho Vivo"
