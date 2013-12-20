@@ -7,7 +7,7 @@ module SPTrans
     let(:token) { double }
 
     describe '#autenticar' do
-      subject(:autenticar) { autenticador.autenticar conexao }
+      subject(:autenticar) { autenticador.autenticar! conexao }
 
       let(:conexao) { Conexao.new conexao_faraday }
       let(:conexao_faraday) { double(post: double(body: 'true')) }

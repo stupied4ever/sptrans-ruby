@@ -4,7 +4,7 @@ module SPTrans
       @token = token
     end
 
-    def autenticar conexao
+    def autenticar! conexao
       response = conexao.post "/v0/Login/Autenticar?token=#{ @token }"
       conexao.autorizado = response.body == 'true'
 
